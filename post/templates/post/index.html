@@ -1,0 +1,9 @@
+{% extends 'post/layout.html' %}
+{% block content %}
+<h2 class="center-align teal lighten-1">Latest Posts </h2>
+<ul class="collection">
+{% for post in posts %}
+    <li class="collection-item"><a href="post/details/{{post.id}}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
